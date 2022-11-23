@@ -50,8 +50,8 @@ public class MainActivity extends AppCompatActivity {
                     String content = ed_content.getText().toString();
                     Note note = new Note(title, content);
 
-                    noteDatabaseHelper.addNotes(note);
-                    loadData();
+                    noteDatabaseHelper.addNote(note);
+                    noteAdapter.notifyDataSetChanged();
                 }
             }
         });
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                         notes.setTitle(ed_title.getText().toString());
                         notes.setContent(ed_title.getText().toString());
 
-                        noteDatabaseHelper.update(notes);
+                        noteDatabaseHelper.updateNote(notes);
 
                         loadData();
                     }
