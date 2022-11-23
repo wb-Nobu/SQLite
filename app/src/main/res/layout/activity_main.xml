@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:id="@+id/tv_title"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        android:id="@+id/ed_title"
+        android:layout_below="@+id/tv_title"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Content"
+        android:id="@+id/tv_content"
+        android:layout_below="@+id/ed_title"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Content"
+        android:id="@+id/ed_content"
+        android:layout_below="@+id/tv_content"/>
+    <LinearLayout
+        android:id="@+id/LL_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/ed_content"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt_new"
+            android:layout_marginLeft="10dp"
+            android:text="clear"
+            android:backgroundTint="#0055FF"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt_save"
+            android:layout_marginLeft="10dp"
+            android:text="save"
+            android:backgroundTint="#0055FF"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt_update"
+            android:layout_marginLeft="10dp"
+            android:text="update"
+            android:backgroundTint="#002AFF"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt_delete"
+            android:layout_marginLeft="10dp"
+            android:text="delete"
+            android:backgroundTint="#FF0000"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_database"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LL_button"
+        android:listSelector="@color/teal_200" />
+
+</RelativeLayout>
